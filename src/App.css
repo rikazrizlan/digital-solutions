@@ -20,10 +20,9 @@
 body {
   padding-top: 66px;
   color: var(--mainWhite);
-  background: var(--mainWhite);
+  background-color: var(--mainBlue);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   line-height: 1.4;
-  background: var(--mainBlue);
 }
 h1 {
   font-size: 3em;
@@ -229,14 +228,79 @@ nav {
   transition: transform 0.5s ease-in-out;
 }
 
-.services {
-  background: var(--mainBlue);
+/* about */
+.about {
   padding: 5rem 0;
   text-align: center;
 }
 
-.services h2 {
-  margin-bottom: 2em;
+.about-center {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px;
+}
+
+.about .fit-bg{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about .section-title{
+  color: var(--mainBlack);
+}
+
+.about p {
+  color: var(--mainWhite);
+  text-align: left;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+@media screen and (max-width: 600px) {
+  .about p {
+    text-align: center;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.line {
+  width: 50px;
+  height: 2px;
+  background-color: var(--mainWhite);
+  align-self: center;
+  margin-bottom: 2.5em;
+}
+
+.line.expanded {
+  width: 100px;
+  transition: 0.8s all ease;
+}
+
+.title-text {
+  margin-bottom: 0;
+}
+
+.title-text.expanded {
+  color: black;
+}
+
+/* end of about */
+
+.services {
+  background: var(--mainBlue);
+  padding: 5rem 0;
+  text-align: center;
 }
 
 .services-center {
@@ -254,20 +318,27 @@ nav {
 
 .services h5 {
   margin-bottom: 0;
+  font-size: 1em;
 }
 
 .services p {
   font-size: 15px;
-  padding: 0 10px;
+  padding: 10px 10px;
 }
 
-.services button {
+.button {
   background: var(--mainBlue);
   border: none;
   color: var(--mainWhite);
   padding: 10px;
   text-transform: uppercase;
   cursor: pointer;
+  font-size: 0.5em;
+  text-decoration: none;
+}
+
+.services .button:hover {
+  opacity: 0.9;
 }
 
 .card {
@@ -279,4 +350,263 @@ nav {
   font-size: 2em;
   border-radius: 10px;
   background: var(--mainWhite);
+}
+
+.review-card {
+    max-width: 15em;
+    padding: 15px 10px;
+    color: black;
+    text-align: center;
+    font-size: 2em;
+    border-radius: 10px;
+    background: var(--mainWhite);
+    margin-bottom: 1em;
+    display: flex;
+}
+
+.review-card p {
+  font-size: 15px;
+  text-align: left;
+  padding: 5px;
+  margin-left: 10px;
+  color: gray;
+}
+
+.review-card span {
+  font-size: 18px;
+  color: black;
+  line-height:initial;
+}
+
+.review-card img {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
+
+.team {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.team-center {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px;
+  background: var(--mainGrey);
+  padding: 60px 8px;
+  border-radius: 20px;
+}
+
+.member {
+  text-align: center;
+  color: black;
+  padding: 10px;
+}
+
+.member h6{
+  margin-bottom: 0;
+}
+
+.member p {
+  opacity: 0.8;
+}
+
+.member img {
+  border-radius: 100%;
+  width: 200px;
+  padding: 10px;
+}
+
+.loading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75vh;
+}
+
+.loading img {
+  width: 200px;
+}
+
+.single {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-service {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.single-service-info {
+  padding: 1.5rem;
+}
+
+.single-service-images img {
+  width: 500px;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--mainWhite);
+  text-decoration: none;
+  padding: 10px 5px;
+  color: black;
+  width: 7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-secondary {
+  background: var(--mainWhite);
+  text-decoration: none;
+  padding: 10px 5px;
+  color: black;
+  width: 7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.btn {
+  position: absolute;
+  bottom: 100px;
+  background: var(--mainWhite);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 10px 20px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.App-logo {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contact {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.contact-center {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px;
+}
+
+.contact p {
+  color: var(--mainWhite);
+  text-align: left;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+@media screen and (max-width: 600px) {
+  .contact p {
+    text-align: center;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+  background-color: var(--mainWhite);
+  border-radius: 10px;
+  padding: 15px 10px;
+  margin-top: 0;
+  color: black;
+}
+
+form label {
+  text-align: left;
+}
+
+.field-finish p {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.field-name,
+.field-email,
+.field-message,
+.field-finish {
+  background: var(--mainBlue);
+  height: 50px;
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.field-name input,
+.field-email input,
+.field-message input {
+  background: none;
+  border: none;
+  flex: 1;
+  height: 100%;
+  outline: none;
+  text-align: center;
+  color: var(--mainWhite);
+}
+
+.field-message textarea {
+  background: none;
+  border: none;
+  flex: 1;
+  height: 100%;
+  outline: none;
+  text-align: center;
+  margin-top: 30px;
+}
+
+form .button {
+  background: var(--mainBlue);
+  color: var(--mainWhite);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 0.8em;
 }

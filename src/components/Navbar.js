@@ -26,13 +26,13 @@ export default class Navbar extends Component {
                     <a href="#about">About Us</a>
                 </li>
                 <li>
-                    <a href="#about">Services</a>
+                    <a href="#team">Our Team</a>
                 </li>
                 <li>
-                    <a href="#services">Careers</a>
+                    <a href="#services">Services</a>
                 </li>
                 <li>
-                <a href="#services">Reach Us</a>
+                <Link to="/contact">Reach Us</Link>
                 </li>
             </ul>
             <div className={this.state.isOpen?"burger toggle":"burger"} onClick={this.handleToggle}>
