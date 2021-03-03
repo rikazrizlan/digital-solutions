@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import {Route, Switch} from 'react-router-dom';
 import SingleService from './pages/SingleService';
 import Contact from './pages/Contact';
-
 export default class App extends React.Component {
   state = {
     loading: true

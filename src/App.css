@@ -454,6 +454,18 @@ nav {
   border-radius: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .single {
+    padding: 1rem 1.5rem;
+  }
+  .single-service {
+    flex-direction: column;
+  }
+  .single-service-images img {
+    width: 300px;
+  }
+}
+
 .btn-primary {
   position: absolute;
   top: 0;
@@ -514,7 +526,7 @@ nav {
 }
 
 .contact {
-  padding: 2rem 0;
+  padding: 0 1rem;
   text-align: center;
 }
 
@@ -536,12 +548,6 @@ nav {
   letter-spacing: 0.3px;
 }
 
-@media screen and (max-width: 600px) {
-  .contact p {
-    text-align: center;
-  }
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -553,6 +559,17 @@ form {
   padding: 15px 10px;
   margin-top: 0;
   color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .contact p {
+    text-align: center;
+  }
+  form {
+    width: 90%;
+    height: 100vw;
+    margin: 20px 20px;
+  }
 }
 
 form label {
@@ -609,4 +626,60 @@ form .button {
   border-radius: 5px;
   margin-top: 20px;
   font-size: 0.8em;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 18vh;
+  background: #fff;
+}
+.footer .sci {
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.footer .sci li {
+  list-style: none;
+}
+
+.footer .sci li a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer .sci li a img {
+  color: black;
+  max-width: 20px;
+  margin-bottom: 10px;
+  transform: scale(0.8);
+}
+
+.footer-text{ 
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #666;
+  text-align: center;
+}
+
+.footer-text span {
+  font-size: 15px;
+}
+
+.footer-text a {
+  color: #000;
+  text-decoration: none;
+}
+
+@media (max-width: 767px){
+  .footer{
+      padding: 40px;
+  }
+  .footer .sci li a {
+      max-width: 20px;
+  }
 }
